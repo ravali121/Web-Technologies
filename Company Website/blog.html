@@ -1,0 +1,430 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+footer{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #4f5d6e;
+  position: relative;
+  background: rgb(26, 49, 95);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(26, 49, 95, 1)), color-stop(10%, rgba(26, 49, 95, 1)), color-stop(24%, rgba(29, 108, 141, 1)), color-stop(37%, rgba(41, 136, 151, 1)), color-stop(77%, rgba(39, 45, 100, 1)), color-stop(90%, rgba(26, 49, 95, 1)), color-stop(100%, rgba(26, 49, 95, 1)));
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1a315f', endColorstr='#1a315f', GradientType=0);
+}
+
+.body-wrap {
+  min-height: 700px;
+}
+
+.body-wrap {
+  position: relative;
+  z-index: 0;
+}
+
+.body-wrap:before,
+.body-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 260px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(26, 49, 95, 1)), color-stop(100%, rgba(26, 49, 95, 0)));
+  background: linear-gradient(to bottom, rgba(26, 49, 95, 1) 0%, rgba(26, 49, 95, 0) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1a315f', endColorstr='#001a315f', GradientType=0);
+}
+
+.body-wrap:after {
+  top: auto;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(26, 49, 95, 0) 0%, rgba(26, 49, 95, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#001a315f', endColorstr='#1a315f', GradientType=0);
+}
+
+nav {
+  margin-top: 60px;
+  box-shadow: 5px 4px 5px #000;
+}
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    background-color: red; /* Green */
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+}
+
+#tab-nav .tab-content {
+    padding: 1.429rem;
+    background-color: #f2f2f2;
+}
+.panel-primary {
+    border-color: #337ab7;
+    float: left;
+    width: 75%;
+}
+.navbaraside {
+    float: right;
+    width: 24%;
+    margin: 2;
+}
+</style>
+
+
+
+</head>
+<title>My Company's Profile</title>
+<script>
+$(document).ready(function(){
+$('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
+});
+</script>
+<body>
+  <div class="body-wrap">
+    <div class="container">
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-left"><img src="logo.jpg" style="max-width:60px; margin-top: -3px;"></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+                        <ul class="nav navbar-nav navbar-right">
+                          <li><a href="Home.html">Home</a></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Mobile</a></li>
+                              <li><a href="bigdata.html">Big data</a></li>
+                              <li><a href="iot.html">IoT</a></li>
+
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="management.html">Management</a></li>
+                  <li><a href="#">Code Of Conduct</a></li>
+                  <li><a href="#">Business Process</a></li>
+                  <li><a href="locations.html">Locations</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+              </li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+
+      <div class="panel panel-primary">
+         <div class="panel-heading" align="center"><font size="6">Blog</font></div>
+         <div class="panel-body"><font size="4">IoT is a cultural shift, not a technical one
+Matthias Max 28/03/2017 Business models, Internet of Things
+The current state of IoT is as diverse as it can get - and at the same time, this makes one thing clearer than ever: people must be at the center of its development. They must be empowered to use IoT in order to achieve their respective goals.
+<br><br>
+Attending this years (massive!) manufacturing hackathon at Bosch ConnectedExperience gave me a very clear insight into where we stand in terms of the promises made by IoT leaders. These include 'zero distance to user,' disruptive business models, transparency, and new sales channels.
+<br><br>
+But more importantly, it gave me a chance to test a top-to-bottom approach on modeling a sales strategy I had in mind. Being a 33/33/33 tech/business/design chameleon myself, this was an exciting journey!
+<br><br>
+<b>The approach</b>
+<br><br>
+
+The sales idea was to establish a sticker on product packaging - the 'QualityDot' - that lets consumers see how their individual product scores on production metrics. OEMs would get new tools for sales by customer segmentation. For example, they could sell 'B class' quality at a discount to customers who don't care about, let's say, a little scratch on the back of their new tablet (with the inner parts being intact). This would result in less waste, prevent grey markets, and strengthen customer confidence.
+<br><br>
+This use case is literally like looking through the price tag with a magnifying glass down to the very moment the product was manufactured in the factory.</font>
+<br><br>
+<b>The chance
+</b>
+<br><br>
+This seems to be the true opportunity offered by IoT: connecting the separate pools of skills and access levels to create greater company-wide innovation potential and build something of more value:
+<img  src = "Innovation-pools.png" alt = "Picture of sales vs iot"  width="100%"  />
+<br><br>
+This is where technology takes effect. IoT products from Bosch, General Electric, AWS - to name but a few - do the heavy lifting for us. With IoT gateways, application platforms, new sensors and actors, and micro-computers, they provide us with the tools to operate innovation seeding to an unprecedented extent .
+
+People usually located far away from "the tech" get the chance to try their business ideas in small teams by implementing real prototypes (yes, without PowerPoint!). It’s kind of like a shortcut to the physical world. Conversely, people working on the hardware at the very end of the technology stack might have business ideas they want to try.
+
+This means startup mentality at your fingertips: build fast, fail early, learn, or ship! 
+<br><br>
+
+       </div>
+       </div>
+
+
+<div class="navbaraside">
+<aside id="tab-nav">
+            <ul role="tablist" class="nav nav-tabs">
+                <li class="active">
+                    <a data-toggle="tab" role="tab" href="#popular" class="anchor">Popular</a>
+                </li>
+                <li>
+                    <a data-toggle="tab" role="tab" href="#discussed" class="anchor">Discussed</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <h1 class="sr-only">Popular &amp; Discussed</h1>
+
+                <div id="popular" class="tab-pane active">
+                    
+<!-- WordPress Popular Posts Plugin v3.3.4 [W] [all] [views] [custom] -->
+<div id="wpp-2" class="widget cb-multi-widget tabbertab popular-posts">
+<div class="sr-only">Popular</div>
+<div>
+<article>
+	<div class="mask">
+		<a href="http://blog.bosch-si.com/categories/internetofthings/2016/03/why-a-bosch-iot-cloud/" title="Why a Bosch IoT Cloud?" target="_self" class="local"><img src="http://blog.bosch-si.com/wp-content/uploads/wordpress-popular-posts/16555-featured-80x60.jpg" width="80" height="60" title="Why a Bosch IoT Cloud?" alt="Why a Bosch IoT Cloud?" class="wpp-thumbnail wpp_cached_thumb wpp_featured" scale="0"></a>
+	</div>
+	<div class="meta">
+		<h2>
+			<a href="http://blog.bosch-si.com/categories/internetofthings/2016/03/why-a-bosch-iot-cloud/" class="local">
+				Why a Bosch IoT Cloud?
+			</a>
+		</h2>
+		<div class="byline">
+			<!--<span class="author"><i class="fa fa-user"></i><a href="http://blog.bosch-si.com/author/volkmardenner/">Volkmar Denner</a></span>-->
+			<span class="date"><i class="fa fa-clock-o"></i><span class="wpp-comments">22 comments</span> | <span class="wpp-author">by <a href="http://blog.bosch-si.com/author/volkmardenner/" class="local">Volkmar Denner</a></span></span>
+			<!--<span class="comments"><i class="fa fa-comment"></i>22</span>-->
+		</div>
+	</div>
+</article>
+<article>
+	<div class="mask">
+		<a href="http://blog.bosch-si.com/categories/manufacturing/2014/08/internet-of-things-iot-and-big-data-brought-together-in-commercial-use-cases/" title="IoT and big data brought together in commercial use cases" target="_self" class="local"><img src="http://blog.bosch-si.com/wp-content/uploads/wordpress-popular-posts/12433-featured-80x60.jpg" width="80" height="60" title="IoT and big data brought together in commercial use cases" alt="IoT and big data brought together in commercial use cases" class="wpp-thumbnail wpp_cached_thumb wpp_featured" scale="0"></a>
+	</div>
+	<div class="meta">
+		<h2>
+			<a href="http://blog.bosch-si.com/categories/manufacturing/2014/08/internet-of-things-iot-and-big-data-brought-together-in-commercial-use-cases/" class="local">
+				IoT and big data brought together in commercial use cases
+			</a>
+		</h2>
+		<div class="byline">
+			<!--<span class="author"><i class="fa fa-user"></i><a href="http://blog.bosch-si.com/author/dirkslama/">Dirk Slama</a></span>-->
+			<span class="date"><i class="fa fa-clock-o"></i><span class="wpp-comments">8 comments</span> | <span class="wpp-author">by <a href="http://blog.bosch-si.com/author/dirkslama/" class="local">Dirk Slama</a></span></span>
+			<!--<span class="comments"><i class="fa fa-comment"></i>8</span>-->
+		</div>
+	</div>
+</article>
+<article>
+	<div class="mask">
+		<a href="http://blog.bosch-si.com/categories/manufacturing/2015/09/smartwatches-assembly-lines/" title="Smartwatches on assembly lines" target="_self" class="local"><img src="http://blog.bosch-si.com/wp-content/uploads/wordpress-popular-posts/15011-featured-80x60.png" width="80" height="60" title="Smartwatches on assembly lines" alt="Smartwatches on assembly lines" class="wpp-thumbnail wpp_cached_thumb wpp_featured" scale="0"></a>
+	</div>
+	<div class="meta">
+		<h2>
+			<a href="http://blog.bosch-si.com/categories/manufacturing/2015/09/smartwatches-assembly-lines/" class="local">
+				Smartwatches on assembly lines
+			</a>
+		</h2>
+		<div class="byline">
+			<!--<span class="author"><i class="fa fa-user"></i><a href="http://blog.bosch-si.com/author/joshlee/">Josh Lee</a></span>-->
+			<span class="date"><i class="fa fa-clock-o"></i><span class="wpp-comments">28 comments</span> | <span class="wpp-author">by <a href="http://blog.bosch-si.com/author/joshlee/" class="local">Josh Lee</a></span></span>
+			<!--<span class="comments"><i class="fa fa-comment"></i>28</span>-->
+		</div>
+	</div>
+</article>
+<article>
+	<div class="mask">
+		<a href="http://blog.bosch-si.com/categories/technology/2012/09/setting-up-maven-and-artifactory/" title="Setting up Maven and Artifactory" target="_self" class="local"><img src="http://blog.bosch-si.com/wp-content/uploads/wordpress-popular-posts/5708-featured-80x60.jpg" width="80" height="60" title="Setting up Maven and Artifactory" alt="Setting up Maven and Artifactory" class="wpp-thumbnail wpp_cached_thumb wpp_featured" scale="0"></a>
+	</div>
+	<div class="meta">
+		<h2>
+			<a href="http://blog.bosch-si.com/categories/technology/2012/09/setting-up-maven-and-artifactory/" class="local">
+				Setting up Maven and Artifactory
+			</a>
+		</h2>
+		<div class="byline">
+			<span class="date"><i class="fa fa-clock-o"></i><span class="wpp-comments">4 comments</span> | <span class="wpp-author">by <a href="http://blog.bosch-si.com/author/saschatheves/" class="local">Sascha Theves</a></span></span>
+				</div>
+	</div>
+</article>
+<article>
+	<div class="mask">
+		<a href="http://blog.bosch-si.com/categories/internetofthings/2014/05/infographic-capitalizing-on-the-internet-of-things/" title="Infographic: Capitalizing on the Internet of Things" target="_self" class="local"><img src="http://blog.bosch-si.com/wp-content/uploads/wordpress-popular-posts/11564-featured-80x60.jpg" width="80" height="60" title="Infographic: Capitalizing on the Internet of Things" alt="Infographic: Capitalizing on the Internet of Things" class="wpp-thumbnail wpp_cached_thumb wpp_featured" scale="0"></a>
+	</div>
+	<div class="meta">
+		<h2>
+			<a href="http://blog.bosch-si.com/categories/internetofthings/2014/05/infographic-capitalizing-on-the-internet-of-things/" class="local">
+				Infographic: Capitalizing on the Internet of Things
+			</a>
+		</h2>
+		<div class="byline">
+			<!--<span class="author"><i class="fa fa-user"></i><a href="http://blog.bosch-si.com/author/anitabunk/">Anita Bunk</a></span>-->
+			<span class="date"><i class="fa fa-clock-o"></i><span class="wpp-comments">20 comments</span> | <span class="wpp-author">by <a href="http://blog.bosch-si.com/author/anitabunk/" class="local">Anita Bunk</a></span></span>
+			<!--<span class="comments"><i class="fa fa-comment"></i>20</span>-->
+		</div>
+	</div>
+</article>
+
+</div>
+</div>
+<!-- End WordPress Popular Posts Plugin v3.3.4 -->
+                </div>
+                <div id="discussed" class="tab-pane">
+                                                                    	<article>
+		<div class="mask">
+							<a href="http://blog.bosch-si.com/categories/manufacturing/2015/09/smartwatches-assembly-lines/" class="image-wrapper local">
+					<img src="http://blog.bosch-si.com/wp-content/uploads/20151019_Smartwatches_1200x520_V2-80x60.png" alt="" scale="0">
+				</a>
+					</div>
+		<div class="meta">
+							<h2>
+					<a href="http://blog.bosch-si.com/categories/manufacturing/2015/09/smartwatches-assembly-lines/" class="local">Smartwatches on assembly lines</a>
+				</h2>
+						<div class="byline">
+							<span class="author">
+					<i class="fa fa-user"></i><a href="http://blog.bosch-si.com/author/joshlee/" class="local">Josh Lee</a>
+				</span>
+										<span class="date">
+					<i class="fa fa-clock-o"></i><time datetime="2015-09-10" class="updated">10/09/2015</time>
+				</span>
+						<span class="comments">
+				<a href="#responses" class="anchor">
+					<i class="fa fa-comment"></i>28				</a>
+			</span>
+		</div>
+		</div>
+	</article>
+	<article>
+		<div class="mask">
+							<a href="http://blog.bosch-si.com/categories/internetofthings/2012/10/progression-from-m2m-to-internet-of-things-an-introductory-blog/" class="image-wrapper local">
+					<img src="http://blog.bosch-si.com/wp-content/uploads/Fotolia_39818901_M-80x60.jpg" alt="" scale="0">
+				</a>
+					</div>
+		<div class="meta">
+							<h2>
+					<a href="http://blog.bosch-si.com/categories/internetofthings/2012/10/progression-from-m2m-to-internet-of-things-an-introductory-blog/" class="local">Progression from M2M to the Internet of Things: an introductory blog</a>
+				</h2>
+						<div class="byline">
+							<span class="author">
+					<i class="fa fa-user"></i><a href="http://blog.bosch-si.com/author/stevehilton/" class="local">Steve Hilton</a>
+				</span>
+										<span class="date">
+					<i class="fa fa-clock-o"></i><time datetime="2012-10-10" class="updated">10/10/2012</time>
+				</span>
+						<span class="comments">
+				<a href="#responses" class="anchor">
+					<i class="fa fa-comment"></i>23				</a>
+			</span>
+		</div>
+		</div>
+	</article>
+	<article>
+		<div class="mask">
+							<a href="http://blog.bosch-si.com/categories/internetofthings/2016/03/why-a-bosch-iot-cloud/" class="image-wrapper local">
+					<img src="http://blog.bosch-si.com/wp-content/uploads/iStock_000052827924_1200x520px-80x60.jpg" alt="" scale="0">
+				</a>
+					</div>
+		<div class="meta">
+							<h2>
+					<a href="http://blog.bosch-si.com/categories/internetofthings/2016/03/why-a-bosch-iot-cloud/" class="local">Why a Bosch IoT Cloud?</a>
+				</h2>
+						<div class="byline">
+							<span class="author">
+					<i class="fa fa-user"></i><a href="http://blog.bosch-si.com/author/volkmardenner/" class="local">Volkmar Denner</a>
+				</span>
+										<span class="date">
+					<i class="fa fa-clock-o"></i><time datetime="2016-03-09" class="updated">09/03/2016</time>
+				</span>
+						<span class="comments">
+				<a href="#responses" class="anchor">
+					<i class="fa fa-comment"></i>22				</a>
+			</span>
+		</div>
+		</div>
+	</article>
+	<article>
+		<div class="mask">
+							<a href="http://blog.bosch-si.com/categories/internetofthings/2014/05/infographic-capitalizing-on-the-internet-of-things/" class="image-wrapper local">
+					<img src="http://blog.bosch-si.com/wp-content/uploads/v2-80x60.jpg" alt="" scale="0">
+				</a>
+					</div>
+		<div class="meta">
+							<h2>
+					<a href="http://blog.bosch-si.com/categories/internetofthings/2014/05/infographic-capitalizing-on-the-internet-of-things/" class="local">Infographic: Capitalizing on the Internet of Things</a>
+				</h2>
+						<div class="byline">
+							<span class="author">
+					<i class="fa fa-user"></i><a href="http://blog.bosch-si.com/author/anitabunk/" class="local">Anita Bunk</a>
+				</span>
+										<span class="date">
+					<i class="fa fa-clock-o"></i><time datetime="2014-05-09" class="updated">09/05/2014</time>
+				</span>
+						<span class="comments">
+				<a href="#responses" class="anchor">
+					<i class="fa fa-comment"></i>20				</a>
+			</span>
+		</div>
+		</div>
+	</article>
+	<article>
+		<div class="mask">
+							<a href="http://blog.bosch-si.com/categories/technology/2011/11/apache-wicket-lessons-learned/" class="image-wrapper local">
+					<img src="http://blog.bosch-si.com/wp-content/uploads/iStock_000000417638Medium_Blog_Bosch-Blau0-50-100-80x60.jpg" alt="" scale="0">
+				</a>
+					</div>
+		<div class="meta">
+							<h2>
+					<a href="http://blog.bosch-si.com/categories/technology/2011/11/apache-wicket-lessons-learned/" class="local">Apache Wicket - three years of lessons learned</a>
+				</h2>
+						<div class="byline">
+							<span class="author">
+					<i class="fa fa-user"></i><a href="http://blog.bosch-si.com/author/arthurhupka/" class="local">Arthur Hupka</a>
+				</span>
+										<span class="date">
+					<i class="fa fa-clock-o"></i><time datetime="2011-11-21" class="updated">21/11/2011</time>
+				</span>
+						<span class="comments">
+				<a href="#responses" class="anchor">
+					<i class="fa fa-comment"></i>19				</a>
+			</span>
+		</div>
+		</div>
+	</article>
+                                    </div>
+            </div>
+        </aside>
+
+  </div>
+  </div>
+  <div class="panel-footer">
+<footer>
+  <br>
+  <p>Posted by: Spartan Community</p>
+  <p>Contact information: <a href="#">batman@spartan.com</a>.</p>
+  <p>Copy rights-my corp,nc 2017</p>
+</footer>
+
+    </div>
+</body>
+</html>

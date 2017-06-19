@@ -1,0 +1,329 @@
+<html>
+<head>
+  <meta author ="Shruthi Kulai"/>
+  <meta description = "Website to display company profile"/>
+  <meta keywords ="iot, responsive, html5, big data, company profile"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+footer{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #4f5d6e;
+  position: relative;
+  background: rgb(26, 49, 95);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(26, 49, 95, 1)), color-stop(10%, rgba(26, 49, 95, 1)), color-stop(24%, rgba(29, 108, 141, 1)), color-stop(37%, rgba(41, 136, 151, 1)), color-stop(77%, rgba(39, 45, 100, 1)), color-stop(90%, rgba(26, 49, 95, 1)), color-stop(100%, rgba(26, 49, 95, 1)));
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1a315f', endColorstr='#1a315f', GradientType=0);
+}
+
+.body-wrap {
+  min-height: 700px;
+}
+
+.body-wrap {
+  position: relative;
+  z-index: 0;
+}
+
+.body-wrap:before,
+.body-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 260px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(26, 49, 95, 1)), color-stop(100%, rgba(26, 49, 95, 0)));
+  background: linear-gradient(to bottom, rgba(26, 49, 95, 1) 0%, rgba(26, 49, 95, 0) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1a315f', endColorstr='#001a315f', GradientType=0);
+}
+
+.body-wrap:after {
+  top: auto;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(26, 49, 95, 0) 0%, rgba(26, 49, 95, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#001a315f', endColorstr='#1a315f', GradientType=0);
+}
+
+nav {
+  margin-top: 60px;
+  box-shadow: 5px 4px 5px #000;
+}
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    background-color: red; /* Green */
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+}
+.leftSection{
+  width: 25%;
+  padding: 10px;
+  margin: 10px;
+  float:left;
+}
+.thumb {
+    margin-bottom: 30px;
+}
+.rightSection{
+  width:70%;
+  padding: 10px;
+  float:left;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.price{
+  padding: 10px;
+  margin: 10px;
+  width:200px;
+  border-radius: 8px;
+  background-color: #47d147;
+  border-color: black;
+  border: 2px solid;
+}
+
+</style>
+
+
+
+</head>
+<title>My Company's Profile</title>
+<script>
+$(document).ready(function(){
+$('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
+});
+</script>
+<body>
+  <div class="body-wrap">
+    <div class="container">
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-left"><img src="logo.jpg" style="max-width:60px; margin-top: -3px;"></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+                        <ul class="nav navbar-nav navbar-right">
+                          <li><a href="Home.html">Home</a></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Mobile</a></li>
+                              <li><a href="bigdata.html">Big data</a></li>
+                              <li><a href="iot.html">IoT</a></li>
+
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="management.html">Management</a></li>
+                  <li><a href="#">Code Of Conduct</a></li>
+                  <li><a href="#">Business Process</a></li>
+                  <li><a href="locations.html">Locations</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+              </li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+
+      <div class="panel panel-primary">
+         <div class="panel-heading" align="center"><font size="6">Internet of Things</font></div>
+         <div class="panel-body"><font size="4"> 
+         <div class="row">
+         <div class="col-md-12">
+           Visionary data scientist. Accomplished industry veterans. Trusted advisors. Proven Investors. OurCo is led by a world-class team that believes in data's potential to change e world. Our company is proud to be backed by Intel Capital, Investor Growth Capital (IGC), QuestMark Partenrs, Goldman Sachs, TransLink Capital and other strategic invesotrs. 
+         </div>
+         </div>
+         
+</font>
+<br><br>
+<div>
+  
+  <div class="container">
+  <div class="row">
+      
+      <div class="leftSection">
+      <div class="panel panel-primary">
+    <div class="panel-heading">Featured News</div>
+    <div class="panel-body">
+      <img src="computing.jpeg" style="max-width:40px; margin-top: -3px;">
+    Big data technologies bring a lot of advantages for businesses. While this is one side of big data technologies the ...
+  </div>
+      <!-- <span style="font-size:30px;font-weight:bold;">Our Offer Pricing</span>
+    <div id="price1" class="price">
+        Number of Sensors: 30<br>
+        Data Streams: 30 kb/sec<br>
+        Price: $30/ month<br>
+    </div>
+          <div id= "price2" class="price">
+           Number of Sensors: 60<br>
+            Data Streams: 50 kb/sec<br>
+            Price: $30/ month<br>
+        </div> -->
+        </div>
+      </div>
+      <div class="col-md-8">
+      
+
+        <div class="rightSection">
+
+            <div class="col-md-12">
+                <h1 class="page-header">Executive Team</h1>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-8 thumb">
+                <a class="thumbnail" href="#" title="Mukul Bajpai" data-toggle="mukulpopover" data-trigger="focus" rel="popover" data-img="mukul.jpg"  >
+                    <img class="img-responsive" height="300" width="400"src="mukul.jpg" alt="" >
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-8 thumb">
+                <a class="thumbnail" href="#" title="Marissa Mayer" data-toggle="marpopover" data-trigger="focus" rel="popover" data-img="marissa.jpg"  >
+                    <img class="img-responsive" height="300" width="400"src="marissa.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-8 thumb">
+                <a class="thumbnail" href="#" title="Taruna Arora" data-toggle="tarunapopover" data-trigger="focus" rel="popover" data-img="taruna.jpg"  >
+                    <img class="img-responsive" height="300" width="400"src="taruna.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-8 thumb">
+                <a class="thumbnail" href="#" title="Ravali Peddi" data-toggle="ravpopover" data-trigger="focus" rel="popover" data-img="ravali.jpg"  >
+                   <img class="img-responsive" height="300" width="400"src="ravali.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-8 thumb">
+                <a class="thumbnail" href="#" title="Shruthi Kulai" data-toggle="shrpopover" data-trigger="focus" rel="popover" data-img="shruthi.jpg"  >
+                    <img class="img-responsive" height="300" width="400"src="shruthi.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-8 thumb">
+                <a class="thumbnail" href="#" title="Jagmohan Singh" data-toggle="jagpopover" data-trigger="focus" rel="popover" data-img="jagmohan.jpg"  >
+                    <img class="img-responsive" height="300" width="400"src="jagmohan.jpg" alt="">
+                </a>
+            </div>
+            
+            
+        
+
+        
+
+        
+
+    </div>
+      </div>
+  </div>
+  </div>
+</div>
+
+
+       </div>
+       </div>
+
+
+<div>
+
+<div class="panel-footer">
+<footer>
+  <br>
+  <p>Posted by: Spartan Community</p>
+  <p>Contact information: <a href="#">batman@spartan.com</a>.</p>
+  <p>Copy rights-my corp,nc 2017</p>
+</footer>
+
+    </div>
+  </div>
+  </div>
+</body>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="mukulpopover"]').popover({
+  html: true,
+  trigger: 'hover',
+  placement: 'bottom',
+  content: function(){return '<img width="100" height="50" src="'+$(this).data('img') + '" />'+' Graduate Research Assistant-San Jose State University |Seeking Full-time/Internship opportunity|Experienced S/W Engineer'}
+}); 
+
+});
+$(document).ready(function(){
+    $('[data-toggle="marpopover"]').popover({
+  html: true,
+  trigger: 'hover',
+  placement: 'bottom',
+  content: function(){return '<img width="100" height="50" src="'+$(this).data('img') + '" />'+' Yahoo!, President & CEO Yahoo!   Stanford University;'}
+}); 
+
+});
+$(document).ready(function(){
+    $('[data-toggle="tarunapopover"]').popover({
+  html: true,
+  trigger: 'hover',
+  placement: 'bottom',
+  content: function(){return '<img width="100" height="50" src="'+$(this).data('img') + '" />'+' Actively seeking full time or internship opportunity | Full Stack Developer | Database Developer | Java Developer'}
+}); 
+
+});
+$(document).ready(function(){
+    $('[data-toggle="shrpopover"]').popover({
+  html: true,
+  trigger: 'hover',
+  placement: 'bottom',
+  content: function(){return '<img width="100" height="50" src="'+$(this).data('img') + '" />'+' Graduate Student at San Jose State University Amadeus Software Labs   San Jose State University'}
+}); 
+
+});
+$(document).ready(function(){
+    $('[data-toggle="ravpopover"]').popover({
+  html: true,
+  trigger: 'hover',
+  placement: 'bottom',
+  content: function(){return '<img width="100" height="50" src="'+$(this).data('img') + '" />'+' Actively Seeking Full time opportunities | Graduate Student at San Jose State University Bharat Heavy Electricals Limited   San Jose State University'}
+}); 
+
+});
+$(document).ready(function(){
+    $('[data-toggle="jagpopover"]').popover({
+  html: true,
+  trigger: 'hover',
+  placement: 'bottom',
+  content: function(){return '<img width="100" height="50" src="'+$(this).data('img') + '" />'+' Full Stack Developer'}
+}); 
+
+});
+</script>
+</html>

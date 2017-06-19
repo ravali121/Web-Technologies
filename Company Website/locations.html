@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script>
+      function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 17,
+    center:   {lat: 37.3382, lng: -121.8863},
+    mapTypeControlOptions: {
+      mapTypeIds: [
+        'roadmap',
+        'satellite'
+      ],
+      position: google.maps.ControlPosition.BOTTOM_LEFT
+    }
+  });
+
+  var widgetDiv = document.getElementById('save-widget');
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(widgetDiv);
+
+  // Append a Save Control to the existing save-widget div.
+  var saveWidget = new google.maps.SaveWidget(widgetDiv, {
+    place: {
+      // ChIJN1t_tDeuEmsRUsoyG83frY4 is the place Id for Google Sydney.
+      placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
+      location:   {lat: 37.3382, lng: -121.8863}
+    },
+    attribution: {
+      source: 'Google Maps JavaScript API',
+      webUrl: 'https://developers.google.com/maps/'
+    }
+  });
+
+  var marker = new google.maps.Marker({
+    map: map,
+    position: saveWidget.getPlace().location
+  });
+		  
+		  var map1 = new google.maps.Map(document.getElementById('map1'), {
+    zoom: 17,
+    center:   {lat: 40.7589, lng: -73.9851},
+    
+  });
+
+  
+
+  var marker1 = new google.maps.Marker({
+    map: map1,
+    position: {lat: 40.7589, lng: -73.9851}
+  });
+		  
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbAaaR72saQ60FVbM3OiB_U8h7G_BbCzc&callback=initMap">
+    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+	#save-widget {
+  width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+  background-color: white;
+  padding: 10px;
+  font-family: Roboto, Arial;
+  font-size: 13px;
+  margin: 15px;
+}
+	
+	
+footer{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #4f5d6e;
+  position: relative;
+  background: rgb(26, 49, 95);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(26, 49, 95, 1)), color-stop(10%, rgba(26, 49, 95, 1)), color-stop(24%, rgba(29, 108, 141, 1)), color-stop(37%, rgba(41, 136, 151, 1)), color-stop(77%, rgba(39, 45, 100, 1)), color-stop(90%, rgba(26, 49, 95, 1)), color-stop(100%, rgba(26, 49, 95, 1)));
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1a315f', endColorstr='#1a315f', GradientType=0);
+}
+
+.body-wrap {
+  min-height: 700px;
+}
+
+.body-wrap {
+  position: relative;
+  z-index: 0;
+}
+
+.body-wrap:before,
+.body-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 260px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(26, 49, 95, 1)), color-stop(100%, rgba(26, 49, 95, 0)));
+  background: linear-gradient(to bottom, rgba(26, 49, 95, 1) 0%, rgba(26, 49, 95, 0) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1a315f', endColorstr='#001a315f', GradientType=0);
+}
+
+.body-wrap:after {
+  top: auto;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(26, 49, 95, 0) 0%, rgba(26, 49, 95, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#001a315f', endColorstr='#1a315f', GradientType=0);
+}
+
+nav {
+  margin-top: 60px;
+  box-shadow: 5px 4px 5px #000;
+}
+
+</style>
+
+
+
+</head>
+<title>My Company's Profile</title>
+<script>
+$(document).ready(function(){
+$('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
+});
+</script>
+<body>
+  <div class="body-wrap">
+    <div class="container">
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-left"><img src="logo.jpg" style="max-width:60px; margin-top: -3px;"></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+                        <ul class="nav navbar-nav navbar-right">
+                          <li><a href="Home.html">Home</a></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Mobile</a></li>
+                              <li><a href="bigdata.html">Big data</a></li>
+                              <li><a href="iot.html">IoT</a></li>
+
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Management</a></li>
+                  <li><a href="#">Code Of Conduct</a></li>
+                  <li><a href="#">Business Process</a></li>
+                  <li><a href="locations.html">Locations</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+              </li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+
+      <div class="panel panel-primary">
+         <div class="panel-heading" align="center"><font size="6">Locations</font></div>
+         <div class="panel-body"><div class="row">
+         <div class="col-lg-push-1 col-md-4" >
+        		<div>
+        		<h4> Spartan Development Group</h4>
+        		<small>
+         		1 Washington Sq,<br>
+         		San Jose, CA 95112 <br>
+         		USA </small></div>
+         		<div id="map" style="min-height: 300px;">	
+         		</div>  
+        		       		<div id="save-widget">
+      <strong>Head Quarters:<br></strong>
+      <p>1 Washington Square<br>
+        San Jose, CA 95112 <br>
+        USA
+      </p>
+    </div>
+         		       		
+</div>
+      
+       <div class="col-md-4 col-md-push-3">
+       		<div>
+        	<h4>Center for Software Development</h4>	<!---->
+        		<small>
+         		Times Square,<br>
+         		Manhattan, NY 10036 <br>
+         		USA </small></div>
+         		<div id="map1" style="min-height: 300px;"></div>
+       		<div id="save-widget1"> 
+	     </div>
+         		
+</div>
+
+       </div>
+       </div>
+
+
+<div>
+
+<div class="panel-footer">
+<footer>
+  <br>
+  <p>Posted by: Spartan Community</p>
+  <p>Contact information: <a href="#">batman@spartan.com</a>.</p>
+  <p>Copy rights-my corp,nc 2017</p>
+</footer>
+
+    </div>
+  </div>
+  </div>
+</body>
+</html>

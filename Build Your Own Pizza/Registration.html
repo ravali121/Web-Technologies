@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+		<head>
+		<meta charset="utf-8">
+		<title>Registration</title>
+		<style type="text/css">
+			.container {
+	border: 2px solid #4810FF;
+	padding-bottom: 30px;
+   	width: 900px;
+   	margin-left: 200px;
+    height: 500px;
+    display: inline-block;
+	background-color:white;
+    
+}
+			
+.body-section {
+	margin-top: 10px;
+	clear: both;
+	padding-top: 10px;
+}
+			.navbar{
+				background-color: #FF0004;
+				border: 1px solid red;
+		
+				height: 60px;
+				width: 898px;
+			}
+label {
+	text-align: right;
+	display: inline-block;
+	width: 400px;
+	float: left;
+	clear: left;
+	padding-right: 8px;
+}
+			button {
+    
+		
+		color: white;
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(black), to(#444));
+    background: -moz-linear-gradient(black, #444);
+				background: linear-gradient(black, #444);
+			padding: 15px;
+		font-size: 16px;}
+
+</style>
+		<script>
+		
+	
+	
+	
+	function validateEntries(){
+		location.href="Page1.html";
+  
+			saveToLocal();
+		}
+		
+	function saveToLocal(){
+	 
+	localStorage.setItem("Address Type",document.getElementById("addresstype").value);
+	localStorage.setItem("Street", document.getElementById("street").value);
+		localStorage.setItem("Mobile",document.getElementById("mobile").value);
+		localStorage.setItem("State",document.getElementById("state").value);
+		
+		localStorage.setItem("City",document.getElementById("city").value);
+	localStorage.setItem("Zipcode", document.getElementById("zipcode").value);
+		
+	
+	
+	}
+	
+		</script>
+		</head>
+
+		<body>
+		<div class="container" >
+<div class="navbar">
+          <h1 style="margin-left:40px; margin-top: 15px;"> Delivery Address </h1>
+          <strong>
+ 
+  </strong> </div>
+<div class="body-section" >
+          <form name="SignUp Form">
+    <table>
+             <tr>
+        <td ><label style="padding-top:20px; padding-left: 210px;">Address Type:
+                
+                  <select id="addresstype" style="width: 200px" autofocus>
+ 
+            <option value="home">Home </option>
+            <option value="office">Office </option>
+            <option value="business">Business </option>
+            <option value="store">Store</option>
+            <option value="apartment">Apartment</option>
+          </select></label></td>
+      </tr>
+              <tr>
+        <td style="padding-top:20px; "><label>Street Address:</label>
+                  <input type="text"  id="street" ></td>
+      </tr>
+      
+              <tr>
+        <td style="padding-top:20px; "><label>Suite/Apt#:</label>
+                  <input type="text" id="apt" ></td>
+      </tr>
+              <tr>
+        <td style="padding-top:20px; "><label>City:</label>
+                  <input type="text" id="city"></td>
+      </tr>
+              
+              <tr>
+        <td style="padding-top:20px; "><label>State:</label>
+                  <input type="text" id="state"></td>
+                  
+      </tr>
+             <tr>
+             	<td style="padding-top:20px; "><label>Zip Code:</label>
+                  <input type="text" id="zipcode"></td>
+             </tr>
+              
+              
+              <tr>
+        <td style="padding-top:20px; "><label >Mobile:</label>
+                  <input type="text" name="mobile" id="mobile"></td>
+      </tr>
+              
+            </table>
+    <p>
+              <button style="margin-left: 350px; padding: 25px; font-size: 16px;" type="button" value="Start Building My Pizza" id="register" onClick="validateEntries()"> Start Building My Pizza </button>
+              <button style="margin-left: 35px; padding: 25px;font-size: 16px;"type="button" value="Cancel" id="cancel"> Cancel</button>
+            </p>
+  </form>
+        </div>
+			</div>
+</body>
+</html>

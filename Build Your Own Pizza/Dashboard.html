@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dashboard</title>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+      google.load("visualization", "1.1", {packages:["corechart","sankey"]});
+      google.charts.setOnLoadCallback(drawChart);
+	  google.charts.setOnLoadCallback(drawSankey);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+		  ['Toppings', 'Hours per Day'],
+          ['Cheese',   parseInt(localStorage.getItem("CheddarCheese"))],
+          ['Olives',  parseInt(localStorage.getItem("Olives"))],
+          ['Garlic',  parseInt(localStorage.getItem("Garlic"))],
+          ['Green Pepper', parseInt(localStorage.getItem("GreenPepper"))],
+          ['Mushrooms', parseInt(localStorage.getItem("Mushrooms"))],
+          ['Onions', parseInt(localStorage.getItem("Onions"))],
+          ['Spinach',  parseInt(localStorage.getItem("Spinach"))],
+			['Jalapenos',  parseInt(localStorage.getItem("Jalapeno"))],
+			['Tomatoes',  parseInt(localStorage.getItem("Tomatoes"))],
+			['Pineapple',  parseInt(localStorage.getItem("Pineapple"))],
+			['BananaPeppers',  parseInt(localStorage.getItem("BananaPeppers"))]
+			
+        ]);
+
+        var chart = new google.visualization.PieChart(document.getElementById('pie-chart'));
+
+        chart.draw(data);
+      }
+   function drawSankey() {
+    var data = new google.visualization.DataTable();
+	
+    data.addColumn('string', 'From');
+    data.addColumn('string', 'To');
+    data.addColumn('number', 'Weight');
+    data.addRows([
+       [ 'Hand Tossed', 'Small',    parseInt(localStorage.getItem("HandTossedSmall"))  || 0],
+       [ 'Hand Tossed', 'Medium',   parseInt(localStorage.getItem("HandTossedMedium")) || 0],
+       [ 'Hand Tossed', 'Large',    parseInt(localStorage.getItem("HandTossedLarge"))  || 0],
+       [ 'Hand Tossed', 'XLarge',   parseInt(localStorage.getItem("HandTossedXLarge")) || 0],
+	   [ 'Hand Made',   'Small',   1],
+	   [ 'Hand Made',   'Medium',   parseInt(localStorage.getItem("HandTossedMedium")) || 0],
+	   [ 'Hand Made',   'Large',   1],
+       [ 'Hand Made',   'XLarge',  1],
+	   [ 'Thin Crust', 'Small',    1],
+       [ 'Thin Crust', 'Medium',    parseInt(localStorage.getItem("ThinCrustMedium"))|| 0],
+       [ 'Thin Crust', 'Large',     parseInt(localStorage.getItem("ThinCrustLarge")) || 0],
+	   [ 'Thin Crust', 'XLarge',   1],
+	   [ 'Brooklyn Style', 'Small', 1],
+	   [ 'Brooklyn Style', 'Medium', 1],
+       [ 'Brooklyn Style', 'Large', parseInt(localStorage.getItem("BrooklynStyleLarge"))  || 0],
+       [ 'Brooklyn Style', 'XLarge', parseInt(localStorage.getItem("BrooklynStyleXLarge"))|| 0],
+       [ 'Gluten Free', 'Small', parseInt(localStorage.getItem("GlutenFreeSmall")) || 0],
+	   [ 'Gluten Free', 'Medium', 1],
+	   [ 'Gluten Free', 'Large',  1],
+	   [ 'Gluten Free', 'XLarge', 1],
+	   [ 'Small', 'Cheddar Cheese', Math.round(((parseInt(localStorage.getItem("HandTossedSmall")) || 0) + (parseInt(localStorage.getItem("CheddarCheese")) || 0))/2)],
+	   [ 'Small', 'Feta Cheese', Math.round(((parseInt(localStorage.getItem("HandTossedSmall")) || 0) + (parseInt(localStorage.getItem("FetaCheese")) || 0))/2)],
+	   [ 'Small', 'Shredded Parmesan', Math.round(((parseInt(localStorage.getItem("HandTossedSmall")) || 0) + (parseInt(localStorage.getItem("ShreddedParmesan")) || 0))/2)],
+	   [ 'Small', 'Shredded Provolone', Math.round(((parseInt(localStorage.getItem("HandTossedSmall")) || 0) + (parseInt(localStorage.getItem("ShreddedProvolone")) || 0))/2)],
+       [ 'Medium', 'Cheddar Cheese', Math.round(((parseInt(localStorage.getItem("HandTossedMedium")) || 0) + (parseInt(localStorage.getItem("CheddarCheese")) || 0))/2)],
+	   [ 'Medium', 'Feta Cheese', Math.round(((parseInt(localStorage.getItem("HandMadeMedium")) || 0) + (parseInt(localStorage.getItem("FetaCheese")) || 0))/2)],
+	   [ 'Medium', 'Shredded Parmesan', Math.round(((parseInt(localStorage.getItem("ThinCrustMedium")) || 0) + (parseInt(localStorage.getItem("ShreddedParmesan")) || 0))/2)],
+	   [ 'Medium', 'Shredded Provolone', Math.round(((parseInt(localStorage.getItem("ThinCrustMedium")) || 0) + (parseInt(localStorage.getItem("ShreddedProvolone")) || 0))/2)],
+       [ 'Large', 'Cheddar Cheese', Math.round(((parseInt(localStorage.getItem("HandTossedLarge")) || 0) + (parseInt(localStorage.getItem("CheddarCheese")) || 0))/2)],
+	   [ 'Large', 'Feta Cheese', Math.round(((parseInt(localStorage.getItem("HandTossedLarge")) || 0) + (parseInt(localStorage.getItem("FetaCheese")) || 0))/2)],
+	   [ 'Large', 'Shredded Parmesan', Math.round(((parseInt(localStorage.getItem("ThinCrustLarge")) || 0) + (parseInt(localStorage.getItem("ShreddedParmesan")) || 0))/2)],
+	   [ 'Large', 'Shredded Provolone', Math.round(((parseInt(localStorage.getItem("ThinCrustLarge")) || 0) + (parseInt(localStorage.getItem("ShreddedProvolone")) || 0))/2)],
+       [ 'XLarge', 'Cheddar Cheese', Math.round(((parseInt(localStorage.getItem("HandTossedXLarge")) || 0) + (parseInt(localStorage.getItem("CheddarCheese")) || 0))/2)],      
+       [ 'XLarge', 'Feta Cheese', Math.round(((parseInt(localStorage.getItem("HandTossedXLarge")) || 0) + (parseInt(localStorage.getItem("FetaCheese")) || 0))/2)],
+       [ 'XLarge', 'Shredded Parmesan', Math.round(((parseInt(localStorage.getItem("BrooklynStyleXLarge")) || 0) + (parseInt(localStorage.getItem("ShreddedParmesan")) || 0))/2)],
+       [ 'XLarge', 'Shredded Provolone', Math.round(((parseInt(localStorage.getItem("BrooklynStyleXLarge")) || 0)+ (parseInt(localStorage.getItem("ShreddedProvolone")) || 0))/2)],
+       [ 'Shredded Provolone', 'Spinach', Math.round(((parseInt(localStorage.getItem("ShreddedProvolone")) || 0)+ (parseInt(localStorage.getItem("Spinach")) || 0))/2)],
+	   [ 'Shredded Provolone', 'Mushroom', Math.round(((parseInt(localStorage.getItem("ShreddedProvolone")) || 0) + (parseInt(localStorage.getItem("Mushrooms")) || 0))/2)],
+	   [ 'Shredded Provolone', 'Garlic', Math.round(((parseInt(localStorage.getItem("ShreddedProvolone")) || 0) + (parseInt(localStorage.getItem("Garlic")) || 0))/2)],
+	   [ 'Shredded Provolone', 'Onions', Math.round(((parseInt(localStorage.getItem("ShreddedProvolone")) || 0) + (parseInt(localStorage.getItem("Onions")) || 0))/2)],
+	     [ 'Shredded Provolone', 'Olives', Math.round(((parseInt(localStorage.getItem("ShreddedProvolone")) || 0) + (parseInt(localStorage.getItem("Olives")) || 0))/2)],
+       [ 'Shredded Parmesan', 'Spinach', Math.round(((parseInt(localStorage.getItem("ShreddedCheese")) || 0) + (parseInt(localStorage.getItem("Spinach")) || 0))/2)],
+	   [ 'Shredded Parmesan', 'Mushroom', Math.round(((parseInt(localStorage.getItem("ShreddedCheese")) || 0) + (parseInt(localStorage.getItem("Mushrooms") || 0)))/2)],
+	   [ 'Shredded Parmesan', 'Garlic', Math.round(((parseInt(localStorage.getItem("ShreddedCheese")) || 0) + (parseInt(localStorage.getItem("Garlic")) || 0))/2)],
+	   [ 'Shredded Parmesan', 'Onions', Math.round(((parseInt(localStorage.getItem("ShreddedCheese")) || 0) + (parseInt(localStorage.getItem("Onions")) || 0))/2)],	   	 
+	   [ 'Shredded Parmesan', 'Olives', Math.round(((parseInt(localStorage.getItem("ShreddedCheese")) || 0) + (parseInt(localStorage.getItem("Olives")) || 0))/2)],
+       [ 'Feta Cheese', 'Spinach', Math.round(((parseInt(localStorage.getItem("FetaCheese")) || 0) + (parseInt(localStorage.getItem("Spinach")) || 0))/2)],
+	   [ 'Feta Cheese', 'Mushroom', Math.round(((parseInt(localStorage.getItem("FetaCheese")) || 0) + (parseInt(localStorage.getItem("Mushrooms")) || 0))/2)],
+	   [ 'Feta Cheese', 'Garlic', Math.round(((parseInt(localStorage.getItem("FetaCheese")) || 0) + (parseInt(localStorage.getItem("Garlic")) || 0))/2)],
+	   [ 'Feta Cheese', 'Onions', Math.round(((parseInt(localStorage.getItem("FetaCheese")) || 0) + (parseInt(localStorage.getItem("Onions")) || 0))/2)],
+	   [ 'Feta Cheese', 'Olives', Math.round(((parseInt(localStorage.getItem("FetaCheese")) || 0) + (parseInt(localStorage.getItem("Olives")) || 0))/2)],
+       [ 'Cheddar Cheese', 'Spinach', Math.round(((parseInt(localStorage.getItem("CheddarCheese")) || 0) + (parseInt(localStorage.getItem("Spinach")) || 0))/2)],
+	   [ 'Cheddar Cheese', 'Mushroom', Math.round(((parseInt(localStorage.getItem("CheddarCheese")) || 0) + (parseInt(localStorage.getItem("Mushrooms")) || 0))/2)],
+	   [ 'Cheddar Cheese', 'Garlic', Math.round(((parseInt(localStorage.getItem("CheddarCheese")) || 0) + (parseInt(localStorage.getItem("Garlic")) || 0))/2)],
+	   [ 'Cheddar Cheese', 'Onions', Math.round(((parseInt(localStorage.getItem("CheddarCheese")) || 0) + (parseInt(localStorage.getItem("Onions")) || 0))/2)],
+       [ 'Cheddar Cheese', 'Olives', Math.round(((parseInt(localStorage.getItem("CheddarCheese")) || 0) + (parseInt(localStorage.getItem("Olives")) || 0))/2)]
+		
+    ]);
+
+    // Set chart options
+    var options = {
+      width: 500,
+    };
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.Sankey(document.getElementById('sankey'));
+    chart.draw(data, options);
+   }
+	  
+	function cluster(){
+		location.href = "Cluster.html";
+		localStorage.clear();
+	}
+	function page(){
+		location.href = "Registration.html";
+		
+	}
+    </script>
+<style>
+	
+	.container {
+	border: 2px solid #002382;
+	padding-bottom: 30px;
+   	width: 900px;
+   	margin-top: 5px;	
+    height: 580px;
+    display: inline-block;
+	background-color:white;
+    
+}
+	.navbar{
+		border: 2px solid grey;
+		background: #FF0004;
+		width: 860px;
+		color: black;
+		padding: 10px;
+    	height: 30px;
+		border-radius: 40px;
+		color: white;
+		text-align: left;
+		
+	}
+	.chart {
+	border: 1px solid black;
+   	width: 340px;
+	float:left;
+   	margin-top: 20px;
+	margin-left: 20px;
+    height: 280px;
+    display: inline-block;
+	background-color:white;
+}
+	.body {
+    margin-top: 75px;
+    padding: 10px;
+    background: white;
+    height: 330px;
+    text-align: left;
+    width: 850px;	
+}
+
+	button {
+		color: white;
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(black), to(#444));
+         background: -moz-linear-gradient(black, #444);
+		 background: linear-gradient(black, #444);
+		padding: 15px;
+		font-size: 16px;
+		margin-right: 60px;
+		width: 140px;
+}
+	</style>
+</head>
+
+<body>
+<center>
+	<div class="container">
+	<h2 style="color:black">Build Your Own Pizza</h2>
+		<div class="navbar" >
+		<ul class = "nav" style="list-style-type: none;">
+            <li id = "dashboard" style="margin-top:-12px;font-size: 20px;"><strong>DASHBOARD</strong></li>
+        </ul>
+		</div>
+		
+		<div class = "chart" id = "pie-chart" style = "float:left"></div>
+         <div class="body">
+          <div class = "sankey" id = "sankey" style= "float:right"></div>	  
+        </div>
+		
+		<button id="build" onClick="cluster()">Finish </button>
+		<button id="continue" onClick="page()">Continue </button>
+		<button id="analysis" onClick="cluster()">Analysis </button>
+	</div>
+	</center>
+	
+	
+</body>
+</html>

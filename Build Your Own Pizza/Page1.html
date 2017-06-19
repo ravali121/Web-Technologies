@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Page1</title>
+<style>
+	
+	.container {
+	border: 2px solid #4810FF;
+		padding-bottom: 30px;
+   	width: 900px;
+   	margin-top: 5px;	
+    height: 580px;
+    display: inline-block;
+	background-color:#4810FF;
+    
+}
+	.navbar{
+		border: 2px solid grey;
+		background:#FFFFFF;
+		width: 860px;
+		color: black;
+		 padding: 10px;
+    height: 45px;
+		
+	}
+	.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4810FF;
+	border-radius:40px;
+}
+
+	li {
+		float:left;
+	}
+	.nav li a {
+		text-decoration: none;
+		display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    
+	}
+	#nav1 {
+	background-color:red;
+	width: 34%;
+}
+	#nav2, #nav3 {
+	width: 33%;
+}
+	li a:hover {
+    background-color: red;
+		
+}
+	.content{
+	border: 2px solid grey;
+		margin-top: 10px;
+		margin-bottom: 10px;
+    margin-left: 18px;
+    padding: 10px;
+    background: #E0E0E0;
+    height: 380px;
+    text-align: left;
+    width: 840px
+	}
+	button {
+    
+		
+		color: white;
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(black), to(#444));
+    background: -moz-linear-gradient(black, #444);
+		 background: linear-gradient(black, #444);
+		padding: 15px;
+		font-size: 16px;
+		margin-right: 60px;
+		width: 140px;
+}
+	</style>
+	<script>
+function storedata() {
+	var pizza = document.getElementsByClassName("garlic-crust");
+	var temp;
+	for(i=0;i<pizza.length;i++) {
+		if(pizza[i].checked) {
+			temp = localStorage.getItem("HandTossed"+pizza[i].value)
+			if(temp!=null)
+			localStorage.setItem("HandTossed"+pizza[i].value,parseInt(temp) + 1);
+			else
+			localStorage.setItem("HandTossed"+pizza[i].value,1);
+		}
+	}
+	pizza = document.getElementsByClassName("handmade");
+	if(pizza[0].checked) {
+			temp = localStorage.getItem("HandMade"+pizza[0].value)
+			if(temp!=null)
+			localStorage.setItem("HandMade"+pizza[0].value,parseInt(temp) + 1);
+			else
+			localStorage.setItem("HandMade"+pizza[0].value,1);
+	}
+	pizza = document.getElementsByClassName("thin-crust");
+	for(i=0;i<pizza.length;i++) {
+		if(pizza[i].checked) {
+			temp = localStorage.getItem("ThinCrust"+pizza[i].value)
+			if(temp!=null)
+			localStorage.setItem("ThinCrust"+pizza[i].value,parseInt(temp) + 1);
+			else
+			localStorage.setItem("ThinCrust"+pizza[i].value,1);
+		}
+	}
+	pizza = document.getElementsByClassName("brooklyn");
+	for(i=0;i<pizza.length;i++) {
+		if(pizza[i].checked) {
+			temp = localStorage.getItem("BrooklynStyle"+pizza[i].value)
+			if(temp!=null)
+			localStorage.setItem("BrooklynStyle"+pizza[i].value,parseInt(temp) + 1);
+			else
+			localStorage.setItem("BrooklynStyle"+pizza[i].value,1);
+		}
+	}
+	pizza = document.getElementsByClassName("gluten-free");
+	for(i=0;i<pizza.length;i++) {
+		if(pizza[i].checked) {
+			temp = localStorage.getItem("GlutenFree"+pizza[i].value)
+			if(temp!=null)
+			localStorage.setItem("GlutenFree"+pizza[i].value,parseInt(temp) + 1);
+			else
+			localStorage.setItem("GlutenFree"+pizza[i].value,1);
+		}
+	}
+	location.href = "Page2.html";
+}
+function cancel() {
+	location.href= "Registration.html";
+}
+</script>
+</head>
+
+<body>
+<center>
+	
+
+<div class="container">
+<h3 style="color: white;">Build Your Own Pizza</h3>
+<div class="navbar">
+<ul class = "nav" style="list-style:none;">
+            <li id = "nav1"><a href="Page1.html">SIZE & CRUST</a></li>
+            
+          	<li id = "nav2"><a href="Page2.html" onClick = "storedata()">CHEESE & SAUCE</a></li>
+          	
+          	<li id = "nav3"><a href="Page2.html">TOPPINGS</a></li>
+        </ul>
+	
+</div>
+<div class="content" style="float: left; padding-left: 10px;">
+<p style="color: #4810FF; "> <strong>CHOOSE SIZE & CRUST</strong><p>
+<form id ="crust">
+	<div id="pane1" style="float: left;">
+	<table width="198" height="205">
+		<tbody>
+			<tr>
+			<td style="color:#4810FF; ">
+				<strong>HAND TOSSED</strong>
+			</td>
+			</tr>
+			<tr style="padding-top: -5px;">
+			<td>
+				Garlic-seasoned crust with a rich, buttery taste
+			</td>
+				
+			</tr>
+			<tr>
+				<td>
+					<input type = "radio" value = "Small" id = "opt1" class = "garlic-crust" name = "size"> Small (10")
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type = "radio" value = "Medium" id = "opt2" class = "garlic-crust" name = "size"> Medium (12")
+				</td>
+			</tr>
+			<tr>
+                <td>
+                	<input type = "radio" value = "Large" id = "opt3" class = "garlic-crust" name = "size"> Large (14")
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "radio" value = "XLarge" id = "opt4" class = "garlic-crust" name = "size"> X-Large (16")
+                </td>
+                </tr>
+		</tbody>
+	</table>
+		
+	</div>
+	<div id="pane2" style="border-color: gray; border-left:1px solid grey; float: left; padding-left: 5px;">
+	<table style="float: left;" width="189" height="177">
+		<tbody>
+			<tr>
+				<td style="color:#4810FF; ">
+					<strong>HANDMADE PAN</strong>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Two layers of cheese, toppings to the edge, and a crust that bakes up golden and crispy with a buttery taste.
+				</td>
+			</tr>
+			<tr>
+                <td>
+                	<input type = "radio" value = "Medium" id = "opt5" class= "handmade" name = "size"> Medium (12")
+                </td>
+                </tr>
+		</tbody>
+	</table>
+		
+	</div>
+	<div id = "pane3" style="float:left; border-left: 1px solid grey; border-color:grey padding-left: 5px;">
+	<table style = "float:left; " width="204" height="157">
+		<tbody>
+			<tr>
+				<td style="color:#4810FF;">
+					<strong>CRUNCHY THIN CRUST</strong>
+				</td>
+			</tr>
+			<tr>
+                <td>Thin enough for the optimum crispy to crunchy ratio.</td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "radio" value = "Medium" id = "opt6" class = "thin-crust" name = "size"> Medium (12")
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "radio" value = "Large" id = "opt7" class = "thin-crust" name = "size"> Large (14")
+                </td>
+                </tr>
+		</tbody>
+	</table>
+	</div>
+		<div id = "pane4" "style=padding-left: 5px;">
+			<table style = "float:left; border-left: 1px solid grey; border-color:grey" width="215" height="172">
+				<tbody>
+					<tr>
+						<td style="color:#4810FF;">
+							<strong>BROOKLYN STYLE</strong>
+						</td>
+					</tr>
+					<tr>
+                <td>Hand stretched to be big, thin, and perfectly foldable.</td>
+                </tr>
+                 <tr>
+                <td>
+                	<input type = "radio" value = "Large" id = "opt8" class = "brooklyn" name = "size"> Large (14")
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "radio" value = "XLarge" id = "opt9" class = "brooklyn" name = "size"> X-Large (16")
+                </td>
+                </tr>
+				</tbody>
+			</table>
+		</div>
+	<div id = "pane5" style="bottom:0px">
+              <table style = "margin-bottom: 0px; display:block" width="141" height="195" class = "gluten-free">
+              <tbody>
+                <tr>
+                <td style= "color:#4810FF">
+					<strong> GLUTTEN FREE CRUST</strong></td>
+                </tr>
+                <tr>
+                <td>Dominos pizza made with Gluten Free Crust.</td>
+                </tr>
+                <tr> 
+                <td>
+                	<input type = "radio" value = "Small" id = "opt8" class = "gluten-free" name = "size"> Small (10")
+                </td>
+                </tr>
+                </tbody>
+              </table>
+              </div> 
+
+	
+</form>
+	
+</div>
+<button id="build" onClick="storedata()">Build </button>
+<button id="cancel" onClick="cancel()">Cancel </button>
+	
+	
+</div>
+</center>
+</body>
+</html>

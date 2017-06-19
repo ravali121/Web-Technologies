@@ -1,0 +1,396 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Page1</title>
+<style>
+	
+	.container {
+	border: 2px solid #4810FF;
+	padding-bottom: 30px;
+   	width: 900px;
+   	margin-top: 5px;	
+    height: 580px;
+    display: inline-block;
+	background-color:#4810FF;
+    
+}
+	.navbar{
+		border: 2px solid grey;
+		background:#FFFFFF;
+		width: 860px;
+		color: black;
+		padding: 10px;
+    	height: 45px;
+		
+	}
+	.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4810FF;
+	border-radius:40px;
+}
+
+	li {
+		float:left;
+	}
+	.nav li a {
+		text-decoration: none;
+		display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    
+	}
+	#nav1 {
+	background-color:red;
+	width: 34%;
+}
+	#nav2, #nav3 {
+	width: 33%;
+	background-color:red;
+}
+	li a:hover {
+    background-color: red;
+		
+}
+	.content{
+	border: 2px solid grey;
+		margin-top: 10px;
+		margin-bottom: 10px;
+    margin-left: 20px;
+    padding: 10px;
+    background: #E0E0E0;
+    height: 380px;
+    text-align: left;
+    width: 820px
+	}
+	button {
+    
+		
+		color: white;
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(black), to(#444));
+    background: -moz-linear-gradient(black, #444);
+		 background: linear-gradient(black, #444);
+		padding: 15px;
+		font-size: 16px;
+		margin-right: 60px;
+		width: 140px;
+}
+	</style>
+	<script>
+function storedata() {
+	
+	var checkedValues = null, temp;
+	checkedValues= document.getElementById("cheddar");
+	
+	if(checkedValues.checked) {
+		temp = localStorage.getItem("CheddarCheese")
+			if(temp!=null)
+			localStorage.setItem("CheddarCheese",parseInt(temp) + 1);
+			else
+			localStorage.setItem("CheddarCheese",1);
+	}
+	checkedValues = document.getElementById("feta");
+	if(checkedValues.checked) {
+		temp = localStorage.getItem("FetaCheese")
+			if(temp!=null)
+			localStorage.setItem("FetaCheese",parseInt(temp) + 1);
+			else
+			localStorage.setItem("FetaCheese",1);
+	}
+	checkedValues = document.getElementById("parmesan");
+	if(checkedValues.checked) {
+		temp = localStorage.getItem("ShreddedParmesan")
+			if(temp!=null)
+			localStorage.setItem("ShreddedParmesan",parseInt(temp) + 1);
+			else
+			localStorage.setItem("ShreddedParmesan",1);
+	}
+	checkedValues = document.getElementById("provolone");
+	if(checkedValues.checked) {
+		temp = localStorage.getItem("ShreddedProvolone")
+			if(temp!=null)
+			localStorage.setItem("ShreddedProvolone",parseInt(temp) + 1);
+			else
+			localStorage.setItem("ShreddedProvolone",1);
+	}
+	checkedValues = document.getElementById("spinach");
+	if(checkedValues.checked) {
+		temp = localStorage.getItem("Spinach")
+			if(temp!=null)
+			localStorage.setItem("Spinach",parseInt(temp) + 1);
+			else
+			localStorage.setItem("Spinach",1);
+	}
+	checkedValues = document.getElementById("mushrooms");
+	if(checkedValues.checked) {
+		temp = localStorage.getItem("Mushrooms")
+			if(temp!=null)
+			localStorage.setItem("Mushrooms",parseInt(temp) + 1);
+			else
+			localStorage.setItem("Mushrooms",1);
+	}
+	checkedValues = document.getElementById("garlic");
+	if(checkedValues.checked) {
+		temp = localStorage.getItem("Garlic")
+			if(temp!=null)
+			localStorage.setItem("Garlic",parseInt(temp) + 1);
+			else
+			localStorage.setItem("Garlic",1);
+	}
+	checkedValues = document.getElementById("onions");
+	if(checkedValues.checked) {
+		temp = localStorage.getItem("Onions")
+			if(temp!=null)
+			localStorage.setItem("Onions",parseInt(temp) + 1);
+			else
+			localStorage.setItem("Onions",1);
+	}
+	checkedValues = document.getElementById("olives");
+	if(checkedValues.checked) {
+		temp = localStorage.getItem("Olives")
+			if(temp!=null)
+			localStorage.setItem("Olives",parseInt(temp) + 1);
+			else
+			localStorage.setItem("Olives",1);
+	}
+	checkedValues = document.getElementById("greenpeppers");
+	if(checkedValues.checked) {
+		temp = localStorage.getItem("GreenPeppers")
+			if(temp!=null)
+			localStorage.setItem("GreenPeppers",parseInt(temp) + 1);
+			else
+			localStorage.setItem("GreenPeppers",1);
+	}
+	checkedValues = document.getElementById("bananapeppers");
+	if(checkedValues.checked) {
+		temp = localStorage.getItem("BananaPeppers")
+			if(temp!=null)
+			localStorage.setItem("BananaPeppers",parseInt(temp) + 1);
+			else
+			localStorage.setItem("BananaPeppers",1);
+	}
+	checkedValues = document.getElementById("jalapeno");
+	if(checkedValues.checked) {
+		temp = localStorage.getItem("Jalapeno")
+			if(temp!=null)
+			localStorage.setItem("Jalapeno",parseInt(temp) + 1);
+			else
+			localStorage.setItem("Jalapeno",1);
+	}
+	checkedValues = document.getElementById("pineapple");
+	if(checkedValues.checked) {
+		temp = localStorage.getItem("Pineapple")
+			if(temp!=null)
+			localStorage.setItem("Pineapple",parseInt(temp) + 1);
+			else
+			localStorage.setItem("Pineapple",1);
+	}
+	checkedValues = document.getElementById("tomatoes");
+	if(checkedValues.checked) {
+		temp = localStorage.getItem("Tomatoes")
+			if(temp!=null)
+			localStorage.setItem("Tomatoes",parseInt(temp) + 1);
+			else
+			localStorage.setItem("Tomatoes",1);
+	}
+	
+	location.href = "Dashboard.html";
+}
+	
+function cancel() {
+	location.href= "Registration.html";
+}
+</script>
+</head>
+
+<body>
+<center>
+<div class="container">
+<h3 style="color: white;">Build Your Own Pizza</h3>
+<div class="navbar">
+<ul class = "nav" style="list-style:none;">
+            <li id = "nav1"><a href="Page1.html">SIZE & CRUST</a></li>
+            
+          	<li id = "nav2"><a href="Page2.html" onClick = "storedata()">CHEESE & SAUCE</a></li>
+          	
+          	<li id = "nav3"><a href="Page2.html">TOPPINGS</a></li>
+        </ul>
+	
+</div>
+<div class="content" style="float: left; padding-left: 25px;">
+<p style="color: #4810FF; "> <strong>CHOOSE TOPPINGS</strong><p>
+<form id ="crust">
+	<div id="pane1" style="float: left;">
+	<table width="198" height="205">
+		<tbody>
+			<tr>
+			<td style="color:#4810FF; ">
+				<strong>CHOOSE MEATS</strong>
+			</td>
+			</tr>
+			<tr>
+                <td>
+                	<input type = "checkbox" value = "pepperoni" class="meats" id="pepperoni"> Pepperoni
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "checkbox" value = "italian" class="meats" id="italian"> Italian Sausage
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "checkbox" value = "slicedItalian" class="meats" id="italiansausage"> Sliced Italian Sausage
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "checkbox" value = "Beef" class="meats"> Beef
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "checkbox" value = "Steak" class="meats"> Philly Steak
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "checkbox" value = "Ham" class="meats"> Ham
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "checkbox" value = "Bacon" class="meats"> Bacon
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "checkbox" value = "Salami" class="meats"> Salami
+                </td>
+                </tr>
+                                <tr>
+                <td>
+                	<input type = "checkbox" value = "Chicken" class="meats"> Premium Chicken
+                </td>
+                </tr>
+		</tbody>
+	</table>
+	</div>
+	<div id="pane2" style="border-color: gray; border-left:1px solid grey; border-right:1px solid grey;  float: left; margin-left: 50px;padding-left: 25px; padding-right:25px;">
+	<table style="float: left;" width="189" height="177">
+		<tbody>
+			<tr>
+				<td style="color:#4810FF; ">
+					<strong> CHOOSE NON-MEATS</strong>
+				</td>
+			</tr>
+			
+                <td>
+                	<input type = "checkbox" value = "Banana Peppers" class="nonmeats" id="bananapeppers"> Banana Peppers
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "checkbox" value = "Black Olives" class="nonmeats" id="olives"> Black Olives
+                </td>
+                </tr>
+                 <tr>
+                <td>
+                	<input type = "checkbox" value = "Garlic" class="nonmeats" id="garlic"> Garlic
+                </td>
+                </tr>
+                 <tr>
+                <td>
+                	<input type = "checkbox" value = "Green Peppers" class="nonmeats" id="greenpeppers"> Green Peppers
+                </td>
+                </tr>
+                 <tr>
+                <td>
+                	<input type = "checkbox" value = "Jalapeno Peppers" class="nonmeats" id="jalapeno"> Jalapeno Peppers
+                </td>
+                </tr>
+                 <tr>
+                <td>
+                	<input type = "checkbox" value = "Mushrooms" class="nonmeats" id="mushrooms"> Mushrooms
+                </td>
+                </tr>
+                 <tr>
+                <td>
+                	<input type = "checkbox" value = "Pineapple" class="nonmeats" id="pineapple"> Pineapple
+                </td>
+                </tr>
+                 <tr>
+                <td>
+                	<input type = "checkbox" value = "Onions" class="nonmeats" id="onions"> Onions
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "checkbox" value = "Red Peppers" class="nonmeats" id="redpeppers"> Roasted Red Peppers
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "checkbox" value = "Spinach" class="nonmeats" id="spinach"> Spinach
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "checkbox" value = "Diced Tomatoes" class="nonmeats" id="tomatoes"> Diced Tomatoes
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "checkbox" value = "Hot Sauce" class="nonmeats"> Hot Sauce
+                </td>
+                </tr>
+                </tbody>
+              </table>
+              </div> 
+              <div style="float: left;padding-left: 10px;margin-left: 25px;">
+              	<table style = "float:left; " width="270" height="172">
+              		<tbody>
+              		<tr>
+              			<td style="color:#4810FF;">
+              				<strong> CHOOSE CHEESE</strong>
+              			</td>
+              		</tr>
+              			<tr>
+                <td>
+                	<input type = "checkbox" value = "Cheddar Cheese" class = "cheese" id="cheddar"> Cheddar Cheese
+                </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "checkbox" value = "Feta Cheese" class = "cheese" id="feta"> Feta Cheese
+                </td>
+                </tr>
+               <tr>
+                <td>
+                	<input type = "checkbox" value = "Shredded Parmesan Asiago" class = "cheese" id="parmesan">
+                         Shredded Parmesan Asiago </td>
+                </tr>
+                <tr>
+                <td>
+                	<input type = "checkbox" value = "Shredded Provolone Cheese" id = "provolone"> Shredded Provolone Cheese
+                </td>
+                </tr>
+              		</tbody>
+             
+              	</table>
+              </div>	
+</form>
+	
+</div>
+<button id="build" onClick="storedata()">Build </button>
+<button id="cancel" onClick="cancel()">Cancel </button>
+	
+	
+</div>
+</center>
+</body>
+</html>
